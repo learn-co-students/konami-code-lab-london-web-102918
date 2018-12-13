@@ -12,5 +12,16 @@ const codes = [
 ];
 
 function init() {
-  // your code here
-}
+  let count = 0;
+  document.body.addEventListener('keydown', (event) => {
+    if (event.key === codes[count]) {
+      count++;
+      if (count === codes.length) {
+        alert("GIT SOME");
+        count = 0
+      };
+    } else {
+      count = 0;
+    }
+  });
+};
